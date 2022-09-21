@@ -3,6 +3,9 @@
 #050533
 #E34234*/
 
+#navbarNavDropdown{width: 50%;}
+.nav-item{margin: 1rem;}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	transition: all 0.5s;
@@ -12,7 +15,7 @@ body {
 	border-color: #F00;
 }
 .navbar>.container{flex-wrap: nowrap;}
-.nav-link li:hover{color: red;}
+
 p {
 	margin-bottom: 0px;
 	font-size: 14px;
@@ -23,7 +26,6 @@ a {
 	text-decoration: none!important;
 }
 
-a:hover{color: red;}
 
 .copyright-text {
 	text-transform: uppercase;
@@ -87,7 +89,7 @@ a:hover{color: red;}
 
 .navbar-nav{ margin-top: 4rem;}
 
-.navbar .navbar-brand img{width: 30%;}
+.navbar .navbar-brand img{width: 40%; margin-bottom: 2rem;}
 .bg-dark {
 	background-color: #fff!important;
 	border-bottom: 1px solid #eee;
@@ -195,6 +197,8 @@ a:hover{color: red;}
 	margin-top: 15px;
 	transition: all 0.5s;
 }
+
+.featured-item a{margin-top: 1rem;}
 .featured-item:hover h4 {
 	color: rgb(13 105 139);
 }
@@ -693,13 +697,13 @@ a:hover{color: red;}
 
 /* Responsive Style */
 @media (max-width: 991px) {
-
+	
 	.banner {
 		border-top: none;
 		margin-top: 0px;
 	}
 	.navbar .navbar-brand {
-		width: auto;
+		width: 70%;
 	}
 	.navbar:after {
 		display: none;
@@ -750,12 +754,14 @@ a:hover{color: red;}
 
 @media (max-width: 767px) {
 
-	.subscribe-form .main-content form input.button {
+	.subscribe-form .main-content form button {
 		margin-top: 20px;
 	}
 	.featured-page #filters {
 		margin-top: 15px;
 		text-align: left;
 	} 
+	.navbar .navbar-brand img{ width: 100%; margin-bottom: 1rem; }
 
+	
 }

@@ -13,33 +13,36 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="assets/images/LOGO1.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#featured" >Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-modal-open" href="about.html" rel="sobre">Sobre nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-modal-open" href="contact.html" rel="contato">Contato</a>
-                    </li>
-                </ul>
-            </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#featured">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class= "nav-link nav-modal-open" href="about.html" rel="sobre">Sobre</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link nav-modal-open" href="contato.htlm" rel="contato"> Contato </a>            
+               </li>
+            </ul>
+            
+          </div>
+         
         </div>
-    </nav>
+     
+      </nav>
+
     
+
     <div class="banner">
         <div class="container">
             <div class="row">
@@ -65,6 +68,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
+
                         <div class="featured-item">
                             <img id='imgPot' src="assets/images/item-01.jpg" alt="Item 1">
                             <h4>Produto 1</h4>
@@ -73,6 +77,7 @@
                                 Comprar
                             </a>
                         </div>
+                        
                         <div class="featured-item">
                             <img id='jumper'src="assets/images/item-02.jpg" alt="Item 2">
                             <h4>Produto 2</h4>
@@ -251,7 +256,7 @@
 
         <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
-          <input type="text" name="nome" id="nome" title="Insira seu nome completo" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome">
+          <input type="text" name="nome" id="nome" title="Insira seu nome completo" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome" required>
           <small id="helpNome" class="text-muted">
               Digite um nome válido
           </small>
@@ -259,7 +264,7 @@
 
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="text" name="email" id="email" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpEmail">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpEmail" required>
             <small id="helpEmail" class="text-muted">
                 Digite um e-mail válido
             </small>
@@ -267,7 +272,7 @@
 
         <div class="mb-3">
             <label for="date" class="form-label">Data</label>
-            <input type="text" name="date" id="date" class="form-control" placeholder="Digite uma data para que contatemos com você" aria-describedby="helpDate">
+            <input type="text" name="date" id="date" class="form-control" placeholder="Digite uma data para que contatemos com você" aria-describedby="helpDate" required>
             <small id="helpDate" class="text-muted">
                 Digite uma data válida
             </small>
@@ -275,7 +280,7 @@
 
         <div class="mb-3">
             <label for="time" class="form-label">Hora</label>
-            <input type="text" name="time" id="time" class="form-control" placeholder="Digite a hora" aria-describedby="helpHora">
+            <input type="text" name="time" id="time" class="form-control" placeholder="Digite a hora" aria-describedby="helpHora" required>
             <small id="helpHora" class="text-muted">
                 Digite um tempo válido
             </small>
@@ -283,7 +288,7 @@
 
         <div class="mb-3">
             <label for="cep" class="form-label">CEP</label>
-            <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite seu cep" aria-describedby="helpCEP">
+            <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite seu cep" aria-describedby="helpCEP" required>
             <small id="helpCEP" class="text-muted">
                 Digite um tempo válido
             </small>
@@ -291,7 +296,7 @@
 
         <div class="mb-3">
             <label for="phone" class="form-label">Celular</label>
-            <input type="text" name="phone" id="phone" class="form-control" placeholder="Digite seu phone" aria-describedby="helpCelular" required>
+            <input type="tel" name="phone" id="phone" class="form-control" placeholder="Digite seu phone" aria-describedby="helpCelular" required>
             <small id="helpCelular" class="text-muted">
                 Digite um celular válido
             </small>
@@ -305,7 +310,7 @@
             </small>
         </div>
 
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button class="btn btn-success" type="submit" >Enviar</button>
 
 
     </form>

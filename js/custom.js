@@ -1,3 +1,25 @@
+
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+
 // instancia jquery e evita conflitos
 // jQuery( function($){
 $(document).ready(function(){
@@ -12,6 +34,15 @@ $(document).ready(function(){
 
     console.log(titulos.first());
 
+$('.featured-item a').click(function(event){
+   event.preventDefault();
+alert('produto esgotado');
+
+
+});
+
+
+
 
 //PRATICA DE JQUERY
 
@@ -23,10 +54,6 @@ $(document).ready(function(){
    $("#jumper").attr('src','assets/images/jumper.png');
    $("#handbag").attr('src','assets/images/handbag.png');
    $('.bg-dark') .attr('style', 'background-color: #F2F1E8 !important');
-
-
-
-
 
     // Configuração de produtos
 
@@ -56,14 +83,7 @@ $(document).ready(function(){
      /*
       * Manipulação de eventos
       */
-     $('.featured-item a').on('blur', function(event){
-
-        event.preventDefault();
-
-        alert('Produto esgotado');
-
-     })
-     
+    
      
      $('#form-submit').on('click', function(e){
 
@@ -186,7 +206,7 @@ $(document).ready(function(){
 
 
    $('body').on('focus', '#date', function(){
-      $(this).datepicker()
+      $(this).datepicker();
    })
 
    $('body').on('blur', '#date', function(){
@@ -215,3 +235,17 @@ $(document).ready(function(){
    })
 
 })
+
+$('.owl-carousel').owlCarousel({
+loop:true,
+margin:10,
+nav:true,
+responsive:{
+0:{items:1},
+600:{items:2},
+1000:{items:3}
+
+}
+
+})
+
