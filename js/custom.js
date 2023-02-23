@@ -50,7 +50,7 @@ alert('produto esgotado');
    $ ('.social-icons>ul>li>a') .css ('background-color', '#ff9f1c');
    $ ('.footer-menu>ul>li>a') .css ('color', '#ff9f1c');
    $ ('.logo') .hide();
-   $("#imgPot").attr('src','assets/images/pot1.png');
+  
    $("#jumper").attr('src','assets/images/jumper.png');
    $("#handbag").attr('src','assets/images/handbag.png');
    $('.bg-dark') .attr('style', 'background-color: #F2F1E8 !important');
@@ -191,7 +191,7 @@ alert('produto esgotado');
          console.log('verificar campos obrigatórios')
          return false
       } else {
-         $(this).submit()  
+         $('.form').submit();  
       }
 
    })
